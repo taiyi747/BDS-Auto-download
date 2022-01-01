@@ -1,20 +1,25 @@
-# BDS-Auto-download
-自动化下载并转存MC服务端
-> 现阶段只完成了bds的下载
-# 说明
-自动从bds官网爬取最新bds版本&下载
-- 使用Python3爬取，支持多平台
-- 支持调用第三方工具转存文件
-- 支持Server酱微信推送（如果希望增加其他平台欢迎找我）
-- 解决了bedrock官网禁止服务商ip问题
-
 # 食用说明
 1. 需要Python3环境
+
+需要的模块
+```
+pip3 install request
+pip3 install BeautifulSoup
+pip3 install lxml
+```
+
 2. 修改BDS-Auto-download.py中的文件路径
 登录[Server酱](https://sct.ftqq.com/)获取SendKey
+
 请确保输入的保存路径存在
+
 执行指令cmd只要在linux上ssh可以执行即可执行(win未测试)
+
 3. 通过宝塔计划任务，linux Crontab定时执行
+```
+python3 BDS-Auto-download.py
+```
+![](https://img30.360buyimg.com/pop/jfs/t1/144895/2/26774/14176/61d04b8cEeb80388c/55b7dfb2f682072b.png)
 
 可通过以下程序进行转存到onedrive，谷歌网盘，腾讯云cos等
 - rclone
