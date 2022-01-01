@@ -32,5 +32,7 @@ python3 BDS-Auto-download.py
 # 其他说明
 本人邮箱taiyi@qcmoe.com
 有问题欢迎反馈，优先邮件解决
+
 可用于生产环境
+
 本项目禁止商业用途(也不可能有人商业用途吧)，基于GPL3开源
