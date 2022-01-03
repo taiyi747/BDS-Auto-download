@@ -17,6 +17,7 @@ f=open(bdslog,"r+",encoding='utf8')
 bds=[]
 for i in f.readlines():
     bds.append(i.strip())
+f.close()
 r=requests.get('https://ssk.taiyu.workers.dev/zh-hans/download/server/bedrock')
 soup = BeautifulSoup(r.text,'lxml')
 print("请求结果："+str(r.status_code))
@@ -33,10 +34,11 @@ else:
     up=1
     bds.append(filename)
     print("下载完成")
+f=open(bdslog,"w+",encoding='utf8')
 for i in bds:
     f.write(str(i)+"\n")
     pass
-f.close
+f.close()
 ##执行脚本
 if up==1:
     if cmd:
